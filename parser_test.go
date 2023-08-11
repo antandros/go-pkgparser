@@ -1,4 +1,4 @@
-package dpkg
+package pkgparser
 
 import (
 	"reflect"

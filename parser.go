@@ -163,12 +163,12 @@ func (p *Parser) convertStringToType(s string, targetType reflect.Type) (interfa
 	return nil, fmt.Errorf("unsupported type: %s", targetType)
 
 }
-func (p *Parser) createModel() interface{} {
+func (p *Parser) CreateModel() interface{} {
 	modelType := reflect.TypeOf(p.Model)
 	newObj := reflect.New(modelType).Interface()
 	return newObj
 }
-func (p *Parser) setValue(key string, val string, model interface{}) (interface{}, error) {
+func (p *Parser) SetValue(key string, val string, model interface{}) (interface{}, error) {
 
 	itemInfo, err := p.findKey(key)
 	others := false
